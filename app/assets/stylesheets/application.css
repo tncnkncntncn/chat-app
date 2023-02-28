@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ * {
+  box-sizing: border-box;
+}
+/* ↑box-sizingのところにある「*」というセレクターは、すべての要素に適用させるという意味 */
