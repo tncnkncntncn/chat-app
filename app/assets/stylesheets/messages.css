@@ -1,46 +1,78 @@
-.wrapper{
+.wrapper {
   display: flex;
-
 }
-
 /*サイドバー*/
-.side-bar{
+.side-bar {
   background-color: #253141;
-  height: 100vh;
   width: 300px;
+  height: 100vh;
 }
-.side-bar-header{
-  background-color: #235141;
+
+/*サイドバー上部*/
+.side-bar-header {
   height: 100px;
-  padding: 0px 20px;
+  padding: 0 20px;
+  background-color: #253141;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.side-bar-main{
+.header-name a{
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+.create-room a {
+  font-size: 10px;
+  border: 1px solid lightblue;
+  padding: 14px;
+  color: deepskyblue;
+  text-decoration: none;
+}
+
+
+
+/*チャットルーム一覧部分 */
+
+.rooms {
   background-color: #2F3E51;
-  height: calc(100vh - 90px);
-  padding: 0px 20px;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  overflow: scroll;
+}
+.room {
+  padding: 20px 0 40px;
+}
+
+.room-name a {
+  text-decoration: none;
+  color: white;
 }
 
 
 
-/*メインチャット*/
-.main-chat{
-  background-color: #ffffff;
-  height: 100%;
+
+
+
+
+
+.chat {
+  background-color: #FFFFFF;
   width: calc(100vw - 300px);
 }
 
-.chat-header{
-  background-color: #ffffff;
+.chat-header {
   height: 100px;
-  padding: 0px 40px;
-  margin-bottom: 46px;
+  padding: 0 40px;
 }
-.chat-main{
+
+.messages {
   background-color: #FAFAFA;
   height: calc(100vh - 100px - 90px);
-  padding: 0px 40px;
+  padding: 46px 40px 0;
 }
-.chat-form{
+
+.form {
   background-color: #DDDDDD;
   height: 90px;
   padding: 20px 40px;
