@@ -3,19 +3,21 @@
       <%= link_to current_user.name, edit_user_path(current_user) %>
   </div>
   <div class="create-room">
-    <a href="#">チャットを作成する</a>
+     <%= link_to "チャットを作成する", new_room_path %>
   </div>
 </div>
 
 <div class="rooms">
   <div class="room">
     <div class="room-name">
-      <a href="#">techroom1</a>
+   <% current_user.rooms.each do |room| %>
+    <div class="room">
+      <div class="room-name">
+        <a href="#"><%= room.name %></a>
+        <%# eachメソッド」を使って全てのチャットルームに対して同じ処理を繰り返し実行 %>
+      </div>
     </div>
-  </div>
-  <div class="room">
-    <div class="room-name">
-      <a href="#">techroom2</a>
+  <% end %>
     </div>
   </div>
 </div>
