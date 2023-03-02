@@ -5,7 +5,7 @@ FactoryBot.define do
     association :room
     
     after(:build) do |message|
-      message.image.attach(io: File.open('public/images/wonder-day-among-us-png-29.png'), filename: 'test_image.png')
+      message.image.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png')
       #afterメソッドを用いて、生成するダミーデータに画像を添付
   end
 
